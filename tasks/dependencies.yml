@@ -20,7 +20,7 @@
     - libmng-dev
     - libghc6-openal-dev
     - libxaw7-dev
-    - libxx87vm-dev
+    - libxxf86vm-dev
     - libghc6-openal-dev
     - libcairo2-dev
     - libcairomm-1.0-dev
