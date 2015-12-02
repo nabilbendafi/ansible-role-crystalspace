@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Nabil Bendafi
+  description: Ansible role to build Open Source 3D SDK Crystal Space
+  company:
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+  categories:
+  - development
+dependencies: []
