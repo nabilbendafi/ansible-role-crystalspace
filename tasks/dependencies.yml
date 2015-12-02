@@ -1,0 +1,40 @@
+- name: Install dependencies
+  apt: name={{ item }} update_cache=yes
+  sudo: yes
+  with_items:
+    - build-essential
+    - jam
+    - subversion
+    - swig
+    - libjpeg62-dev
+    - libogg-dev
+    - libopenal-dev
+    - libasound2-dev
+    - libx11-dev
+    - python2.6-dev
+    - freeglut3-dev
+    - libgl1-mesa-dev
+    - zlib1g-dev
+    - libpng12-dev
+    - nvidia-cg-toolkit
+    - libmng-dev
+    - libghc6-openal-dev
+    - libxaw7-dev
+    - libxx87vm-dev
+    - libghc6-openal-dev
+    - libcairo2-dev
+    - libcairomm-1.0-dev
+    - libvorbis-dev
+    - speex
+    - libgtk2.0-dev
+    - libjackasyn-dev
+    - libcppunit-dev
+    - libwx11-dev
+    - libsdl1.2-dev
+    - libcucul-dev
+    - libcaca-dev
+    - libtemplate-perl
+    - libspeex-dev
+    - ant
+    - sun-java6-sdk
+    - doxygen
