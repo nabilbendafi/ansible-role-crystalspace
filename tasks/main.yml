@@ -1,1 +1,2 @@
 - include: dependencies.yml
+- include: cegui.yml

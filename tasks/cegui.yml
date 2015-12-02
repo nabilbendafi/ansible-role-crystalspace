@@ -1,0 +1,35 @@
+- name: Install dependencies
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - automake
+    - libtool
+    - libpcre3-dev
+    - libfreeimage-dev
+
+- name: Download CEGUI
+  hg:
+    repo=http://crayzedsgui.hg.sourceforge.net/hgweb/crayzedsgui/cegui_mk2/file/v0-7
+    dest=/tmp/cegui_mk2-0-7l
+    purge=yes
+
+- name: Configure CEGUI
+  shell: "{{ item }} chdir=/tmp/cegui_mk2-0-7l"
+  with_items:
+    - ./bootstrap
+    - ./configure --disable-xerces-c
+  environment:
+    PATH: "{{ ansible_env.PATH }}:{{ install_dir }}/bin"
+
+- name: Compile CEGUI
+  shell: make -j {{ ansible_processor_vcpus }}
+    chdir=/tmp/cegui_mk2-0-7l
+  environment:
+    PATH: "{{ ansible_env.PATH }}:{{ install_dir }}/bin"
+
+- name: Install CEGUI
+  sudo: yes
+  shell: make install
+    chdir=/tmp/cegui_mk2-0-7l
+  environment:
+    PATH: "{{ ansible_env.PATH }}:{{ install_dir }}/bin"
