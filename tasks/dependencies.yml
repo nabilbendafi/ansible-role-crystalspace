@@ -11,7 +11,7 @@
     - libopenal-dev
     - libasound2-dev
     - libx11-dev
-    - python2.6-dev
+    - python2.7-dev
     - freeglut3-dev
     - libgl1-mesa-dev
     - zlib1g-dev
